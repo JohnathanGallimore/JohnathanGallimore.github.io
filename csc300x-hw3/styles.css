@@ -1,0 +1,141 @@
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: darkblue;
+    color: white;
+}
+
+
+h1,h2,h3{
+    color: gold;
+}
+
+.introduction,
+.locations{
+    flex: 1;
+    padding: 20px;
+}
+.introduction{
+    background-color: darkblue;
+    color: white;
+    font-size: 16pt;
+}
+
+
+.locations{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.restaurant{
+    margin: 20px;
+    font-size: 14pt;
+}
+
+.menu{
+    display: flex;
+    position: relative;
+    z-index: 1;
+}
+
+.dish{
+    margin-right: 10px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    text-align: center;
+
+}
+
+.dish img{
+    max-width: 100px;
+    transition: transform 0.3s ease;
+    padding: 50px;
+}
+
+.dish:hover .dish-name,
+.dish:hover .dish-price,
+.dish:hover .dish-description{
+    font-size: 1.2em;
+}
+.dish img:hover{
+    transform: scale(1.1) ;
+}
+
+.dish-description{
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: black;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.dish:hover .dish-description{
+    position: absolute;
+    top: calc(100% - 10px);
+    left: 50%;
+    background-color: black;
+    transform: translateX(-50%);
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-top: none;
+    display: block;
+    z-index: 2;
+    width: 200px;
+}
+
+.dish:hover .dish-description::before{
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+a{
+    color: white;
+
+}
+
+a:hover{
+    color: white;
+}
+
+ul{
+    font-size: 16pt;
+}
+
+.meal-plan{
+    text-align: right;
+    font-size: 14pt;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+}
+
+.content{
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    width: 100%;
+}
+
+.recommendations, .meal-plan{
+    flex-basis: 45%;
+}
+
+footer{
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
