@@ -84,6 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
             setTimeout(() => {
                 clearInterval(shuffleInterval);
                 const computerMove = computerPlay();
+                console.log('Computer move:', computerMove)
                 computerChoice.src = `images/${computerMove}.PNG`;
                 determineWinner(playerChoice, computerMove);
             }, 3000);
