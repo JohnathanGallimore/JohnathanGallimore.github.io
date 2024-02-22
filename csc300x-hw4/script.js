@@ -32,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     function resetGame() {
         result.textContent = '';
-        computerChoice.src = 'images/question-mark.png';
+        computerChoice.src = 'images/question-mark.PNG';
         choices.forEach(choice => choice.classList.remove('active'));
 
         const computerChoiceImg = document.querySelector('.computer-choice');
