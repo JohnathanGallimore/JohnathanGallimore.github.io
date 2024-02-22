@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
             this.classList.add('active');
 
             
-            const imageFilenames = ['images/rock.png', 'images/paper.png', 'images/scissors.png'];
+            const imageFilenames = ['rock.png', 'paper.png', 'scissors.png'];
             let index = 0;
             const shuffleInterval = setInterval(() => {
                 computerChoice.src = `images/${imageFilenames[index]}`;
