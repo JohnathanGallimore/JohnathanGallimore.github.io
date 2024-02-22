@@ -74,7 +74,9 @@ document.addEventListener('DOMContentLoaded', function() {
             const imageFilenames = ['rock.png', 'paper.png', 'scissors.png'];
             let index = 0;
             const shuffleInterval = setInterval(() => {
-                computerChoice.src = `images/${imageFilenames[index]}`;
+                const imagePath = `images/${imageFilenames[index]}`;
+                console.log('Computed image path:', imagePath);
+                computerChoice.src = imagePath;
                 index = (index + 1) % imageFilenames.length;
             }, 500);
 
